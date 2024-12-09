@@ -1,0 +1,329 @@
+/* Garante que o layout ocupe toda a altura da página */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container para o layout */
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 80px; /* Espaço para evitar que o conteúdo sobreponha o header */
+}
+
+/* Garante que o conteúdo preencha o espaço disponível */
+.container-wrapper > .container {
+  flex: 1;
+}
+
+/* Header */
+header.header {
+  background-color: #d32f2f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Garante que o header fique acima do conteúdo */
+}
+
+header.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header.header .user-info {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 14px;
+}
+
+/* Estilo das notícias */
+.news-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Notícias em destaque */
+.featured-news {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.news-item.featured {
+  width: 32%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.news-item.featured img {
+  width: 100%;
+  height: 180px; /* Ajuste para garantir que as imagens tenham um tamanho consistente */
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 15px;
+}
+
+.news-info h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.news-info h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.news-info .summary {
+  color: #555;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.news-info .date {
+  color: #999;
+  font-size: 12px;
+}
+
+/* Conteúdo principal */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.other-news {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.other-news .news-item img {
+  width: 100%;
+  height: 120px; /* Ajuste para garantir que as imagens tenham um tamanho consistente */
+  object-fit: cover;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: white;
+  padding: 15px;
+  margin-left: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #d32f2f;
+}
+
+.sidebar ul li a:hover {/* Estilo para garantir que as notícias não fiquem sobre o header */
+  .container-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* Ajusta o padding para descer o conteúdo */
+  }
+  
+  .container-wrapper > .container {
+    flex: 1;
+  }
+  
+  /* Garante que o rodapé fique no fim da página */
+  footer.footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+  }
+  
+  header.header {
+      background-color: #d32f2f;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+  }
+  
+  header.header h1 {
+      margin: 0;
+      font-size: 28px;
+  }
+  
+  header.header .user-info {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 14px;
+  }
+  
+  .news-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-news {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+  }
+  
+  .news-item.featured {
+      width: 32%;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+  }
+  
+  .news-item.featured img {
+      width: 100%;
+      height: 180px; /* Ajuste para garantir que as imagens tenham um tamanho consistente */
+      object-fit: cover;
+  }
+  
+  .news-info {
+      padding: 15px;
+  }
+  
+  .news-info h2 {
+      font-size: 18px;
+      margin: 10px 0;
+  }
+  
+  .news-info h3 {
+      font-size: 16px;
+      margin: 10px 0;
+  }
+  
+  .news-info .summary {
+      color: #555;
+      font-size: 14px;
+      margin: 10px 0;
+  }
+  
+  .news-info .date {
+      color: #999;
+      font-size: 12px;
+  }
+  
+  .main-content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  
+  .other-news {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  
+  .other-news .news-item img {
+      width: 100%;
+      height: 120px; /* Ajuste para garantir que as imagens tenham um tamanho consistente */
+      object-fit: cover;
+  }
+  
+  .sidebar {
+      flex: 1;
+      background-color: white;
+      padding: 15px;
+      margin-left: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+  }
+  
+  .sidebar h3 {
+      margin-bottom: 15px;
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .sidebar ul li {
+      margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+      text-decoration: none;
+      color: #d32f2f;
+  }
+  
+  .sidebar ul li a:hover {
+      text-decoration: underline;
+  }
+  
+  footer.footer {
+      background-color: #d32f2f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+  }
+  
+  text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+footer.footer {
+  background-color: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Para garantir que o rodapé não sobreponha o conteúdo */
+.footer-spacer {
+  height: 40px;
+}
